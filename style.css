@@ -1,0 +1,121 @@
+/* Reset */ 
+    * {
+        box-sizing: border-box;
+    }
+/* Gerais */
+    body {
+        margin: 0;
+    }
+    h1 {
+        text-transform: uppercase;
+        text-align: center;
+    }
+/* Header */
+    header {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    
+    }
+    .header {
+        height: 60px;
+        background-color: #FF0000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header h3 {
+        text-transform: uppercase;
+        margin-left: 50px;
+    }
+    .header nav ul {
+        display: flex;
+        list-style: none;
+        
+    }
+    .header nav ul li {
+        margin-right: 30px;
+        text-transform: uppercase;
+    }
+    .header nav ul li a {
+        text-decoration: none;
+        color: #000;
+        padding: 10px;
+    }
+    .header nav ul li a:hover {
+        color: #FFF;
+    }
+/* Slider */ 
+    .slider {
+        width: 100vw;
+        height: 500px;
+        overflow: hidden;
+    }
+    .slider--width {
+        height: 100%;
+        display: flex;
+        transition: all ease 0.3s;
+    }
+    .slider--item {
+        width: 100vw;
+        height: inherit;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+        text-shadow: 0px 1px 1px #333;
+        font-size: 50px;
+    }
+    .slider--controls {
+        position: absolute;
+        z-index: 99;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px ;
+    }
+    .slider--control {
+        width: 30px;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        cursor: pointer;
+        display: flex;
+        font-size: 3rem;
+        color: #ff0000 ;
+    }
+
+             
+    /* Responsive */   
+        @media(min-width:362px) and (max-width: 560px) {
+            .header {
+                flex-direction: column;
+                height: auto;
+                align-items: flex-start;
+                padding: 0;
+            }
+            .slider {
+                width: 100%;
+            }
+            h1 {
+                font-size: 1rem;
+                text-align: left;
+                padding-left: 10px;
+            }
+        }
+        @media(max-width:360px){
+            .header {
+                flex-direction: column;
+                height: auto;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                padding: 0;
+                margin: 0;
+                font-size: 0.5rem;
+
+            }
+        }
